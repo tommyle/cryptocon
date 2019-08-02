@@ -19,16 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-ZH-Z2T">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search by Symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DZb-Ho-1cO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DZb-Ho-1cO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3fi-fu-jdx"/>
+                            <constraint firstItem="DZb-Ho-1cO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6i8-sZ-wAJ"/>
                             <constraint firstItem="YRM-ZH-Z2T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9c5-0S-ei1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YRM-ZH-Z2T" secondAttribute="trailing" id="KlX-3I-Fnt"/>
+                            <constraint firstItem="DZb-Ho-1cO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a9l-tw-ceS"/>
+                            <constraint firstItem="YRM-ZH-Z2T" firstAttribute="top" secondItem="DZb-Ho-1cO" secondAttribute="bottom" id="eTp-cL-feJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YRM-ZH-Z2T" secondAttribute="bottom" id="sFI-ug-iRu"/>
-                            <constraint firstItem="YRM-ZH-Z2T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yVt-nb-rIL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="69.642857142857139"/>
         </scene>
     </scenes>
 </document>

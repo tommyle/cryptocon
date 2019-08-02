@@ -31,7 +31,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p93-ZW-Ok6">
                                 <rect key="frame" x="0.0" y="0.0" width="96" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -86,6 +86,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="logoImage" destination="0b0-WP-6ms" id="cHd-hu-meb"/>
+                <outlet property="marketCapDeltaLabel" destination="EAT-KE-AHE" id="HiF-fm-HAT"/>
                 <outlet property="marketCapLabel" destination="Zt3-OK-QMk" id="pBr-mH-J3G"/>
                 <outlet property="nameLabel" destination="p93-ZW-Ok6" id="xz1-MF-MPP"/>
                 <outlet property="priceDeltaLabel" destination="2vT-Jn-V0u" id="Be0-0e-rqK"/>

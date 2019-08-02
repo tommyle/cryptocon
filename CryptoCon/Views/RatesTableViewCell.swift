@@ -36,7 +36,7 @@ class RatesTableViewCell: UITableViewCell {
         self.priceLabel.text = "$\(rate.rate ?? 0.0)"
         self.priceDeltaLabel.text = "\(rate.change_pct ?? 0.0)"
         self.marketCapLabel.text = "$\(rate.cap ?? 0.0)"
-//        self.marketCapDeltaLabel.text = "$\(rate.change_pct ?? 0.0)"
+        self.marketCapDeltaLabel.text = "$\(rate.vol ?? 0.0)"
 
         if let name = rate.name {
             let image = UIImage(named: name.lowercased())
