@@ -84,10 +84,11 @@ extension ViewController: UISearchBarDelegate {
             return name.lowercased().contains(searchText.lowercased())
         })
 
-        if (searchText == "") {
+        if (searchText.isEmpty) {
             self.isSearching = false
         }
 
         self.tableView.reloadData()
     }
+
 }
