@@ -17,6 +17,7 @@
 		72F9D2B222F4DFA10016D96C /* RatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9D2B022F4DFA10016D96C /* RatesTableViewCell.swift */; };
 		72F9D2B322F4DFA10016D96C /* RatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F9D2B122F4DFA10016D96C /* RatesTableViewCell.xib */; };
 		72F9D2B522F4EBB90016D96C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F9D2B422F4EBB90016D96C /* Assets.xcassets */; };
+		72F9D2B922F4F4640016D96C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9D2B822F4F4640016D96C /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		72F9D2B022F4DFA10016D96C /* RatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTableViewCell.swift; sourceTree = "<group>"; };
 		72F9D2B122F4DFA10016D96C /* RatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatesTableViewCell.xib; sourceTree = "<group>"; };
 		72F9D2B422F4EBB90016D96C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72F9D2B822F4F4640016D96C /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				72F9D2B422F4EBB90016D96C /* Assets.xcassets */,
+				72F9D2B722F4F4540016D96C /* Helpers */,
 				72F9D2AF22F4DF7A0016D96C /* Views */,
 				72F9D2AA22F4DA450016D96C /* Model */,
 				72F9D2A922F4DA410016D96C /* API */,
@@ -130,6 +133,14 @@
 				72F9D2B122F4DFA10016D96C /* RatesTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		72F9D2B722F4F4540016D96C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				72F9D2B822F4F4640016D96C /* ImageHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 				72F9D2B222F4DFA10016D96C /* RatesTableViewCell.swift in Sources */,
 				72F9D28A22F4DA300016D96C /* AppDelegate.swift in Sources */,
 				72F9D2AC22F4DA540016D96C /* RatesAPI.swift in Sources */,
+				72F9D2B922F4F4640016D96C /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

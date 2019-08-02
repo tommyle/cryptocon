@@ -30,4 +30,22 @@ class RatesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    func setup(rate: Rate) {
+        self.nameLabel.text = rate.name ?? "Unknown"
+        self.priceLabel.text = "$\(rate.rate ?? 0.0)"
+        self.priceDeltaLabel.text = "\(rate.change_pct ?? 0.0)"
+        self.marketCapLabel.text = "$\(rate.cap ?? 0.0)"
+//        self.marketCapDeltaLabel.text = "$\(rate.change_pct ?? 0.0)"
+
+        if let name = rate.name {
+            let image = UIImage(named: name.lowercased())
+            if (image == nil) {
+                self.logoImage.image = UIImage(named: "strat")
+            }
+            else {
+                self.logoImage.image = image
+            }
+        }
+    }
 }

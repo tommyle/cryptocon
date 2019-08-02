@@ -60,12 +60,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         let rate = self.rates[indexPath.row]
-
-        cell.nameLabel.text = rate.name ?? "Unknown"
-        cell.priceLabel.text = "\(rate.rate ?? 0.0)"
-        cell.priceDeltaLabel.text = "\(rate.change_pct ?? 0.0)"
-        cell.marketCapLabel.text = "\(rate.cap ?? 0.0)"
-//        cell.marketCapDeltaLabel.text = "\(rate.change_pct ?? 0.0)"
+        cell.setup(rate: rate)
 
         return cell
     }
