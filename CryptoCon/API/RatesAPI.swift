@@ -16,8 +16,7 @@ class RatesApi {
     typealias QueryResult = (RateData?, String?) -> Void
 
     func getRates(completion: @escaping QueryResult) {
-        let url = URL(string:  "http://api.coinlayer.com/api/live?access_key=d4605c54c3d0e4012b7ec4dd1146a632")!
-
+        let url = URL(string:  "http://api.coinlayer.com/api/live?access_key=d4605c54c3d0e4012b7ec4dd1146a632&expand=1")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -33,7 +32,7 @@ class RatesApi {
                 }
             } catch {
                 DispatchQueue.main.async {
-                    completion(nil, "Error geting rates")
+                    completion(nil, error.localizedDescription)
                 }
             }
         })

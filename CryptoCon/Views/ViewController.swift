@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         self.rates.removeAll()
 
         for (key, value) in rateData.rates {
-            self.rates.append(Rate(name: key, price: value))
+            let rate = Rate(name: key, rate: value.rate, high: value.high, low: value.low, vol: value.vol, cap: value.cap, sup: value.sup, change: value.change, change_pct: value.change_pct)
+            self.rates.append(rate)
         }
     }
 }
@@ -58,8 +59,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        cell.nameLabel.text = self.rates[indexPath.row].name
-        cell.priceLabel.text = "\(self.rates[indexPath.row].price)"
+        let rate = self.rates[indexPath.row]
+
+        cell.nameLabel.text = rate.name ?? "Unknown"
+        cell.priceLabel.text = "\(rate.rate ?? 0.0)"
+        cell.priceDeltaLabel.text = "\(rate.change_pct ?? 0.0)"
+        cell.marketCapLabel.text = "\(rate.cap ?? 0.0)"
+//        cell.marketCapDeltaLabel.text = "\(rate.change_pct ?? 0.0)"
 
         return cell
     }
