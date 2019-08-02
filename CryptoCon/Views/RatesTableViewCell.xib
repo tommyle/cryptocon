@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="RatesTableViewCell" customModule="CryptoCon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-WP-6ms">
+                        <rect key="frame" x="12" y="12.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="VnF-bd-OoA"/>
+                            <constraint firstAttribute="height" constant="40" id="kK4-FK-Rm5"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tfY-xZ-cnP">
+                        <rect key="frame" x="64" y="15.5" width="96" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p93-ZW-Ok6">
+                                <rect key="frame" x="0.0" y="0.0" width="96" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-G4-7j2">
+                                <rect key="frame" x="0.0" y="19.5" width="96" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVL-cF-qLu">
+                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-0.09%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vT-Jn-V0u">
+                                        <rect key="frame" x="54.5" y="0.0" width="41.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-Rd-hcl">
+                        <rect key="frame" x="172" y="17" width="136" height="30.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$185.80B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt3-OK-QMk">
+                                <rect key="frame" x="77.5" y="0.0" width="58.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$17.60B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-KE-AHE">
+                                <rect key="frame" x="91" y="16" width="45" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tfY-xZ-cnP" firstAttribute="centerY" secondItem="0b0-WP-6ms" secondAttribute="centerY" id="44M-Jp-zBT"/>
+                    <constraint firstItem="0b0-WP-6ms" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Dyg-F4-Q4k"/>
+                    <constraint firstItem="tfY-xZ-cnP" firstAttribute="leading" secondItem="0b0-WP-6ms" secondAttribute="trailing" constant="12" id="KB5-fw-dgC"/>
+                    <constraint firstItem="d1l-Rd-hcl" firstAttribute="centerY" secondItem="tfY-xZ-cnP" secondAttribute="centerY" id="REm-aq-vp4"/>
+                    <constraint firstItem="d1l-Rd-hcl" firstAttribute="leading" secondItem="tfY-xZ-cnP" secondAttribute="trailing" constant="12" id="UK0-O9-Y8E"/>
+                    <constraint firstItem="0b0-WP-6ms" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Zan-DK-5pd"/>
+                    <constraint firstItem="tfY-xZ-cnP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kql-Oz-F6J"/>
+                    <constraint firstAttribute="trailing" secondItem="d1l-Rd-hcl" secondAttribute="trailing" constant="12" id="vbg-5S-v8L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="logoImage" destination="0b0-WP-6ms" id="cHd-hu-meb"/>
+                <outlet property="marketCapLabel" destination="Zt3-OK-QMk" id="pBr-mH-J3G"/>
+                <outlet property="nameLabel" destination="p93-ZW-Ok6" id="xz1-MF-MPP"/>
+                <outlet property="priceDeltaLabel" destination="2vT-Jn-V0u" id="Be0-0e-rqK"/>
+                <outlet property="priceLabel" destination="OVL-cF-qLu" id="dXq-Ng-GzB"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="90.401785714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
