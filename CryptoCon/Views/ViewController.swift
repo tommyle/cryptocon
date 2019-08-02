@@ -11,8 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
     var rates: [Rate] = [Rate]()
+    var filteredRates: [Rate] = [Rate]()
+    var isSearching: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,7 @@ class ViewController: UIViewController {
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.searchBar.delegate = self
 
         self.loadRates()
     }
@@ -46,12 +50,16 @@ class ViewController: UIViewController {
             self.rates.append(rate)
         }
     }
+
+    private func rateResults() -> [Rate] {
+        return self.isSearching ? self.filteredRates : self.rates
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rates.count
+        return self.rateResults().count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,10 +67,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let rate = self.rates[indexPath.row]
+        let rate = self.rateResults()[indexPath.row]
         cell.setup(rate: rate)
 
         return cell
     }
 }
 
+extension ViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.isSearching = true
+
+        self.filteredRates = self.rates.filter({rate in
+            guard let name = rate.name else { return false }
+            return name.lowercased().contains(searchText.lowercased())
+        })
+
+        if (searchText == "") {
+            self.isSearching = false
+        }
+
+        self.tableView.reloadData()
+    }
+}
