@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Storj.png",
+      "filename" : "storj.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Storj@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Storj@3x.png",
       "scale" : "3x"
     }
   ],

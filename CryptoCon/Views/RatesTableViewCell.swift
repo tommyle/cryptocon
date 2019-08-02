@@ -41,7 +41,7 @@ class RatesTableViewCell: UITableViewCell {
         if let name = rate.name {
             let image = UIImage(named: name.lowercased())
             if (image == nil) {
-                self.logoImage.image = UIImage(named: "strat")
+                self.logoImage.image = UIImage(named: "cix")
             }
             else {
                 self.logoImage.image = image
