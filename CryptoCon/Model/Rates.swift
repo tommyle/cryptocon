@@ -43,6 +43,6 @@ struct Rate: Decodable {
             return "N/A"
         }
         let sign = changePct >= 0 ? "▲" : "▼"
-        return String(format: "%@%.2f%%", sign, changePct)
+        return String(format: "%@ %.2f%%", sign, changePct)
     }
 }
