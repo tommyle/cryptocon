@@ -39,13 +39,8 @@ class RatesTableViewCell: UITableViewCell {
         self.marketCapDeltaLabel.text = "$\(rate.vol ?? 0.0)"
 
         if let name = rate.name {
-            let image = UIImage(named: name.lowercased())
-            if (image == nil) {
-                self.logoImage.image = UIImage(named: "cix")
-            }
-            else {
-                self.logoImage.image = image
-            }
+            let image = UIImage(named: name.lowercased()) ?? UIImage(named: "cix")
+            self.logoImage.image = image
         }
     }
 }

@@ -46,9 +46,25 @@ class ViewController: UIViewController {
         self.rates.removeAll()
 
         for (key, value) in rateData.rates {
+            // Only add supported coins
+            if (!Utils.supportedCoins.contains(key.lowercased())) {
+                continue
+            }
+
             let rate = Rate(name: key, rate: value.rate, high: value.high, low: value.low, vol: value.vol, cap: value.cap, sup: value.sup, change: value.change, change_pct: value.change_pct)
             self.rates.append(rate)
         }
+
+        self.rates = self.sortAlphabetically(rates: self.rates)
+    }
+
+    private func sortAlphabetically(rates: [Rate]) -> [Rate] {
+        return rates.sorted(by: {
+            guard let name1 = $0.name, let name2 = $1.name else {
+                return false
+            }
+            return name1 < name2
+        })
     }
 
     private func rateResults() -> [Rate] {
