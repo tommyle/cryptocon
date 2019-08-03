@@ -20,6 +20,7 @@
 		72F9D2BB22F505260016D96C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9D2BA22F505260016D96C /* Utils.swift */; };
 		72F9D2C022F509650016D96C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9D2BE22F509650016D96C /* DetailViewController.swift */; };
 		72F9D2C122F509650016D96C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F9D2BF22F509650016D96C /* DetailViewController.xib */; };
+		72F9D2C722F5DBB00016D96C /* RatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9D2C622F5DBB00016D96C /* RatesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		72F9D2BA22F505260016D96C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		72F9D2BE22F509650016D96C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		72F9D2BF22F509650016D96C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		72F9D2C622F5DBB00016D96C /* RatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		72F9D29D22F4DA310016D96C /* CryptoConTests */ = {
 			isa = PBXGroup;
 			children = (
+				72F9D2C622F5DBB00016D96C /* RatesTests.swift */,
 				72F9D29E22F4DA310016D96C /* CryptoConTests.swift */,
 				72F9D2A022F4DA310016D96C /* Info.plist */,
 			);
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F9D29F22F4DA310016D96C /* CryptoConTests.swift in Sources */,
+				72F9D2C722F5DBB00016D96C /* RatesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
