@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
+        self.searchBar.autocapitalizationType = UITextAutocapitalizationType.none
 
         self.loadRates()
     }
