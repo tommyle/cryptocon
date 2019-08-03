@@ -8,12 +8,28 @@
 
 import UIKit
 
-class DetailViewController: ViewController {
+class DetailViewController: UIViewController {
+
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var changeLabel: UILabel!
+
+    let rate: Rate
+
+    init(rate: Rate) {
+        self.rate = rate
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = rate.name
+        self.priceLabel.text = "US $\(rate.rate ?? 0.0)"
+        self.changeLabel.text = rate.getChangePctFormatted()
     }
 
 

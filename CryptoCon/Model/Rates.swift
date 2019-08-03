@@ -37,4 +37,12 @@ struct Rate: Decodable {
         self.change = rate.change
         self.change_pct = rate.change_pct
     }
+
+    func getChangePctFormatted() -> String {
+        guard let changePct = self.change_pct else {
+            return "N/A"
+        }
+        let sign = changePct >= 0 ? "▲" : "▼"
+        return String(format: "%@%.2f%%", sign, changePct)
+    }
 }

@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "CrytoCon"
+
         self.tableView.register(RatesTableViewCell.nib, forCellReuseIdentifier: RatesTableViewCell.identifier)
 
         self.tableView.delegate = self
@@ -88,6 +90,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(rate: rate)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController(rate: rateResults()[indexPath.row])
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
