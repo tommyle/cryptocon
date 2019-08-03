@@ -65,6 +65,8 @@ class Rates: XCTestCase {
     func testRateDataParsing() {
         do {
             let newRates = try JSONDecoder().decode(RateData.self, from: ratesDataJson)
+            XCTAssertEqual(newRates.timestamp, 1564846566)
+            XCTAssertEqual(newRates.success, true)
             XCTAssertEqual(newRates.rates.count, 2)
         } catch {
             XCTFail(error.localizedDescription)
