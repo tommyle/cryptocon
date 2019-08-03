@@ -52,7 +52,7 @@ class ViewController: UIViewController {
                 continue
             }
 
-            let rate = Rate(name: key, rate: value.rate, high: value.high, low: value.low, vol: value.vol, cap: value.cap, sup: value.sup, change: value.change, change_pct: value.change_pct)
+            let rate = Rate(name: key, rate: value)
             self.rates.append(rate)
         }
 

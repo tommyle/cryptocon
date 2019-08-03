@@ -25,4 +25,16 @@ struct Rate: Decodable {
     let sup: Float?
     let change: Float?
     let change_pct: Float?
+
+    init(name: String, rate: Rate) {
+        self.name = name
+        self.rate = rate.rate
+        self.high = rate.high
+        self.low = rate.low
+        self.vol = rate.vol
+        self.cap = rate.cap
+        self.sup = rate.sup
+        self.change = rate.change
+        self.change_pct = rate.change_pct
+    }
 }
